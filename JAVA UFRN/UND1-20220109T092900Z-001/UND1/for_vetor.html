@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for/vetor</title>
+		<script>
+		var vetB= new Array(tam);
+		var vetA= new Array(tam);
+		var vetC= new Array(tam);
+		var tam=4;
+		var pe;
+		for(var i=0; i=tam;i++)
+		{
+				vetA[i]=+prompt("Digite o vetA["+i"]");
+		}
+		for(var i=0; i=tam;i++)
+		{
+				vetB[i]=+prompt("Digite o vetB["+i"]");
+		}
+		
+		document.writeln("<h1> MENU </h1>");
+		document.writeln("<h2> 1-soma </h2>");
+		document.writeln("<h2> 2-subtração </h2>");
+		document.writeln("<h2> 3-Produto Escalar </h2>");
+		document.writeln("<h2> 4-Produto Vetorial </h2>");
+		document.writeln("<h2> 5-Vetor * kte </h2>");
+		document.writeln("<h2> 6-Sair </h2>");
+		
+		document.writeln("<table border=1>");
+			document.writeln("<tr>");
+					document.writeln("<th>Soma</th>");
+					document.writeln("<th>subtração</th> ");
+					document.writeln("<th>PE</th>");
+					document.writeln("<th>PV</th> ");
+					document.writeln("<th>VETOR*Kte</th>");
+			document.writeln("</tr>");
+			document.writeln("<tr>");
+		switch (opção)											
+				{
+					case 1:
+						for(var i=0; i=tam;i++)
+							{
+								vetC[i]=vetA[i]+vetB[i];
+							}
+						document.writeln("<table border=1>");
+							document.writeln("<tr>");
+						for(var i=0; i=tam;i++)
+							{
+								document.writeln("<th>"+vetC[i]+"</th>");
+							}
+							document.writeln("<tr>");
+						break;
+					case 2:
+						for(var i=0; i=tam;i++)
+							{
+								vetC[i]=vetA[i]-vetB[i];
+							}
+						document.writeln("<table border=1>");
+							document.writeln("<tr>");
+						for(var i=0; i=tam;i++)
+							{
+								document.writeln("<th>"+vetC[i]+"</th>");
+							}
+							document.writeln("<tr>");
+						break;
+					case 3:
+						pe=0
+						for(var i=0; i=tam;i++)
+							{
+								vetC[i]=vetA[i]-vetB[i];
+							}
+						for(var i=0; i=tam;i++)
+							{
+								pe=pe+vetC[i];
+							}
+						if (pe=0){
+						document.writeln("<h1> Os vetores são perpendiculares </h1>");
+						}
+						else{
+							document.writeln("<h1> não são perpendiculares </h1>");
+						}
+					break;
+					case 4:
+						
+						
+						
+						
+					break;
+					case 5:
+						vetA[i]=+prompt(" qual o valor da constante "+pe);
+						pe=2
+							for(var i=0; i=tam;i++)
+								{
+									vetC[i]=vetA[i]*pe;
+								}
+							document.writeln("<table border=1>");
+							document.writeln("<tr>");
+						for(var i=0; i=tam;i++)
+							{
+								document.writeln("<th>"+vetC[i]+"</th>");
+							}
+							document.writeln("<tr>");
+					break;
+					case 6:
+						document.writeln("Saiu");
+					break;
+					default:
+						document.writeln("<h3> OPÇÃO NÃO VALIDA </h3>");
+				}
+		
+		
+		</script>
+	</head>
+	<meta charset="UTF-8">
+	<body>
+	
+	</body>
+</html>

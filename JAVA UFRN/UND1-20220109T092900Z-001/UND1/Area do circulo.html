@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Programa Padrão</title>	
+		<meta charset="UTF-8">
+	<script>
+		var a;
+		var b;
+		var Area;
+		var x;
+		
+		//a=parseInt(prompt("Digite o valor de a;")) //atribuir o valor inteiro
+		b=parseFloat(prompt("Digite o valor de b;"));//atribuir o valor real
+		
+		a=Math.PI; //atribuir o valor de pi
+		x=a+b;
+		b=Math.pow(b,2); //elevar ao ^2
+		Area=a*b	//calcular o valor da area circulo
+		
+		
+		document.write("<h1> O valor de Area é igua a " + Area + "</h1> "); //aparecer a tela. Não precisa do window pois ele é um objeto maior. posso colocar funções do HTML
+		console.log(" O valor de x é igua a " + x);// aparece no console
+		console.log(" O valor de pi é igua a " + a.toFixed(3));
+		console.log("A area do circulo é =" + Area);
+		
+		
+	</script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>

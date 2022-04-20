@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>piso flutuante</title>
+		<script>
+		var l=6;
+		var c=6;
+		var piso=new Array(l);
+		var pav1=new Array(l);
+		var pav2=new Array(l);
+		var pav3=new Array(l);
+		var pav=new Array(l);
+		//Math.floot(Math.random()*(max-min))+min; //gerar numero aleatorio
+		//quantidade de colunas
+		for(var i=0; i<l;i++)
+		{
+			piso[i]=new Array(c);
+			pav1[i]=new Array(c);
+			pav2[i]=new Array(c);
+			pav3[i]=new Array(c);
+			pav[i]=new Array(c);
+		}
+		
+	//gerar numeros aleatorios para as matrizes 
+		for(var i=0; i<l;i++)
+		{
+			for(var j=0; j<c;j++)
+			{
+				piso[i][j]=Math.floor(Math.random()*(180-60))+60;
+				pav1[i][j]=Math.floor(Math.random()*(80-20))+20;
+				pav2[i][j]=Math.floor(Math.random()*(80-20))+20;
+				pav3[i][j]=Math.floor(Math.random()*(80-20))+20;
+			}
+		}
+		//somar os pavimentos
+		for(var i=0; i<l;i++)
+		{
+			for(var j=0; j<c;j++)
+			{
+				pav[i][j]=pav1[i][j]+pav2[i][j]+pav3[i][j]
+			}
+		}
+		//colocar o valor do 1 pav 
+		document.writeln("<h1> 1 PAV </h1>");
+		document.writeln("<table border=1>");
+		for(var i=0; i<l;i++)
+		{
+			document.writeln("<tr>");
+			for(var j=0; j<c;j++)
+			{
+				
+					document.writeln("<th>"+pav1[i][j]+"</th>");
+			}
+			document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		//colocar o valor do 2 pav 
+		document.writeln("<h1> 2 PAV </h1>");
+		document.writeln("<table border=1>");
+		for(var i=0; i<l;i++)
+		{
+			document.writeln("<tr>");
+			for(var j=0; j<c;j++)
+			{
+				
+					document.writeln("<th>"+pav2[i][j]+"</th>");
+			}
+			document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		//colocar o valor do 3 pav 
+		document.writeln("<h1> 3 PAV </h1>");
+		document.writeln("<table border=1>");
+		for(var i=0; i<l;i++)
+		{
+			document.writeln("<tr>");
+			for(var j=0; j<c;j++)
+			{
+				
+					document.writeln("<th>"+pav3[i][j]+"</th>");
+			}
+			document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		//colocar o valor do piso 
+		document.writeln("<h1> PISO </h1>");
+		document.writeln("<table border=1>");
+		for(var i=0; i<l;i++)
+		{
+			document.writeln("<tr>");
+			for(var j=0; j<c;j++)
+			{
+				
+					document.writeln("<th>"+piso[i][j]+"</th>");
+			}
+			document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		//compara com o piso e colocar se sobrecarregou ou não(vermelho/azul)
+		document.writeln("<h1> resultado </h1>");
+		document.writeln("<table border=1>");
+		for(var i=0; i<l;i++)
+		{
+			document.writeln("<tr>");
+			for(var j=0; j<c;j++)
+			{
+				if(piso[i][j]>pav[i][j]){
+					//azul 	
+					document.writeln("<td bgcolor='blue'>"+pav[i][j]+"</td>");
+				}
+				else{
+					document.writeln("<td bgcolor='red'>"+pav[i][j]+"</td>");
+					//red
+				}
+			}
+			document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		</script>
+	</head>
+	<meta charset="UTF-8">
+	<body>
+	
+	</body>
+</html>

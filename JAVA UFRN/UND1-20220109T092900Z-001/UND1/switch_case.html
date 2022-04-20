@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Votação times</title>
+		<script>
+			var opção;
+			var n;
+			var c=0;
+			
+			document.writeln("<h1> escolha sua opção </h1>"); //co0locar na tela
+			document.writeln("<h2> opção 1 </h2>");
+			document.writeln("<h2> opção 2</h2>");
+			document.writeln("<h2> opção 3 </h2>");
+			document.writeln("<h2> opção 4 </h2>");
+			
+			opção=parseInt(prompt("Digite sua opção")); //pedir qual opção abrir
+			do{
+			switch (opção)											//opção de abrir 
+			{
+				case 1:
+					n=parseInt(prompt("Digite o valor do numero"));
+					for(var j=0; j<10;j++)
+					{
+						c=n*j;
+						document.writeln(n+" * "+j+" = "+ c);
+					}
+					
+					break;
+				case 2:
+					n=parseInt(prompt("Digite o valor do numero"));
+					if(n%2==0{
+						document.writeln("<h3> par </h3>");
+					}else{
+						document.writeln("<h3> impar </h3>");
+					}
+					break;
+				case 3:
+					n=prompt("Digite a letra");
+					white (n == 'n' || n=='N' ){
+					document.writeln("<h3> ola.. digitei a letra  </h3>"+n);
+					}
+				break;
+			}
+				if(opção !=4){
+					document.writeln("<h3> opção errada </h3>");
+			
+			}white (opção!= 4)
+
+		</script>
+	</head>
+	<meta charset="UTF-8">
+	<body>
+	
+	</body>
+</html>

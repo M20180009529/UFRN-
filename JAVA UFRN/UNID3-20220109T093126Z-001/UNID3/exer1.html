@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>atv1</title>
+</head>
+<script>
+var person1= new Object();
+	firstName="John";
+	lastName="Doe";
+	age= 50;
+	eyeColor="blue";
+
+var person2={
+	firstName:"Fulano",
+	lastName:'Doedoe",
+	age: 46,
+	eyeColor:"blue",
+	fullName:function(){
+		return this.firstName + " "+this.lastName;
+	}
+}
+function teste(){
+	console.log(person.age);
+	console.log(person.fullName());
+}
+var fullName= function(){
+	return this.firstName+ " "+this.lastName;
+}
+</script>
+<body>
+
+<input type ="button" onclick= "teste()" value="click">
+
+</body>
+</html> 

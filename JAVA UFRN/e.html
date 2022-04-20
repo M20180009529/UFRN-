@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>eq 2 grau</title>	
+		<meta charset="UTF-8">
+	<script>
+		var A;
+		var B;
+		var C;
+		var delta;
+		var x1;
+		var x2;
+		
+		A=parseFloat(prompt("VALOR A"));
+		B=parseFloat(prompt("VALOR B"));
+		C=parseFloat(prompt("VALOR C"));
+		
+		delta= Math.pow(B,2)-4*A*C
+		
+		if (delta > 0){
+			x1=(-B+Math.pow(delta,1/2))/(2*A)
+			x2=(-B-Math.pow(delta,1/2))/(2*A)
+			document.write("as raiz são " + x1 + " e "+x2);
+		}
+		else{
+			if (delta < 0){
+				document.write("O numero será inracional");
+			}
+			else{
+				x1=(-B/(2*A));
+				document.write("a raiz é " + x1);
+			}
+		}
+		
+	</script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>

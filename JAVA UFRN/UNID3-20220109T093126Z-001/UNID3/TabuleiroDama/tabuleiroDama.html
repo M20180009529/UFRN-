@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="Biblio_geom_completo.js"></script>
+<script>
+
+function iniciar()
+{
+	var S = new Square();
+	var R = new Rectangle();
+	var C = new Circle();
+	var T = new Triangle();
+
+
+	var s = new Array(2);
+	s[0] = new Point();
+	s[1] = new Point();
+	
+	for(var i=0; i<8;i++){
+		for(var j=0; j<8;j++){
+			if (j%2==0){
+			s[0].set_coord(0,0);
+			s[1].set_coord(100,100);
+			S.set_diagonal(s);
+			S.set_lado();
+			S.set_coord(i*200,j*100); 
+			S.draw("black");
+			}
+			else{
+			s[0].set_coord(0,0);
+			s[1].set_coord(100,100);
+			S.set_diagonal(s);
+			S.set_lado();
+			S.set_coord(i*200+100,j*100); 
+			S.draw("black");
+			}
+		}
+	}
+	
+   
+
+
+}
+window.onload = function() {iniciar();}
+
+function mensagem (mens,id){
+	document.getElementById(id).innerHTML=mens;
+}
+
+
+</script>
+
+</head>
+<style>
+  canvas { border: 1px solid black; }
+</style>
+
+<body>
+<canvas id="myCanvas" width = "800" height = "800"></canvas>
+<hr>
+<p id="saida1"><p>
+<hr>
+</body>
+</html>

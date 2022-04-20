@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>atv5</title>
+		<script type="application/javascript" src="difere_fin.js"></script>
+		<script type="application/javascript" src="bib_matriz.js"></script>
+		<meta charset="UTF-8">
+    <style>
+      p {
+          text-align: justify;
+      }
+      </style>
+		<script>
+			  
+    
+      
+			function passaValor(){
+          
+          
+					window.location= "projefin.html?minhaVariavel="+document.getElementById("quantidade").value;
+					
+			}
+      
+		</script>
+    <style>
+      body {
+          background-image: url("https://cdn.glitch.com/51baacaa-9b5c-4da7-944e-07e57ef1e56f%2Fblack-1072366_1920.jpg?1541702437098");
+      }
+</style>
+	</head>
+	<body>
+  
+    <h3 style="color:Azure ;"> Exemplo de diferença finitas em uma placa plana bidimensional</h3>
+    
+    <img src = "https://cdn.glitch.com/51baacaa-9b5c-4da7-944e-07e57ef1e56f%2FSem%20t%C3%ADtulo.png?1541702943215" width="250" height="205">
+    <h4 style="color:Azure ;">
+      Na figura acima se encontra como será feito o cálculo de diferença finita, abaixo estão as variáveis que podem ser implementadas na simulação.
+    </h4>
+		<p style="color:Azure ;">
+      quantos elementos vc quer numa linha: <input type="text" id="quantidade" name = "val1" value="4">
+    </p> 
+    <br>	
+
+    <button onclick ="passaValor()">ok!</button>
+    <p>
+    <a style="color:Red" href="Principal.html"> <img src = "https://cdn.glitch.com/51baacaa-9b5c-4da7-944e-07e57ef1e56f%2Fvoltar.png?1541711245448" width="75" height="50"></a>   
+    </p>	
+  </body>
+</html>

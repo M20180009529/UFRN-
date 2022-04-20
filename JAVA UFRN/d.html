@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>media de notas</title>	
+		<meta charset="UTF-8">
+	<script>
+		var p1;
+		var p2;
+		var p3;
+		var p4;
+		var media;
+		
+		p1=parseFloat(prompt("Sua primeira nota"));
+		p2=parseFloat(prompt("Sua segunda nota"));
+		p3=parseFloat(prompt("Sua terceira nota"));
+		p4=parseFloat(prompt("Sua quarta nota"));
+		
+		media= (p1+p2+p3+p4)/4;
+		
+		if (media >= 7){
+			document.write("<p style=color:green;>Aprovado</p>");
+		}
+		else{
+			p1=parseFloat(prompt("envie a nota de exame"));
+		
+		media=(media+p1)/2;
+		if (media >= 5){
+			document.write("<p style=color:green;>Aprovado em exame</p>");
+		}
+		else{
+			document.write("<p style=color:red;>Reprovado</p>")
+		}
+		}
+		
+	</script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>

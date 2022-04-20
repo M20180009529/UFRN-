@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>simulação</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/bib_matriz.js"></script>
+	<script type="application/javascript" src="dif.fin.js"></script>
+    
+    <style>
+      p {
+          text-align: justify;
+      }
+      </style>
+    <style>
+      body {
+          background-image: url("https://cdn.glitch.com/51baacaa-9b5c-4da7-944e-07e57ef1e56f%2Fblack-1072366_1920.jpg?1541702437098");
+      }
+</style>
+		<script>
+			var tam= 6;
+		
+      var quanti = querystring("minhaVariavel");
+      
+      function querystring(parameter){
+        var loc=location.search.substring(1,location.search.length);
+        var param_value=false;
+        var params = loc.split("&");
+        for (i=0; i<params.length;i++){
+          param_name=params[i].substring(0,params[i].indexOf('='));
+          if(param_name==parameter){
+            param_value=params[i].substring(params[i].indexOf('=')+1);
+          }
+        }
+        if (param_value){
+          return param_value;
+        }
+        else{
+          return undefined;
+        }
+      }
+			function myfunction(M){
+          
+          var tesq =+document.getElementById("tesq").value;
+          var tdir =+document.getElementById("tdir").value;
+          var tsup =+document.getElementById("tsup").value;
+          var tconv =+document.getElementById("tconv").value;
+          var hconv =+document.getElementById("hconv").value;
+          var lado=+document.getElementById("lado").value;
+          var k =+document.getElementById("k").value;
+          var tem =+document.getElementById("tem").value;
+					dif_fin(tesq,tdir,tsup,tconv,hconv,lado,k,quanti,tem,M);
+					
+			}
+		</script>
+	</head>
+	<body>
+    
+    <h3 style="color:Azure ;"> Exemplo de diferença finitas em uma placa plana bidimensional</h3>
+    
+    <img src = "https://cdn.glitch.com/51baacaa-9b5c-4da7-944e-07e57ef1e56f%2FSem%20t%C3%ADtulo.png?1541702943215" width="250" height="205">
+    <h4 style="color:Azure ;">
+      Na figura acima se encontra como será feito o cálculo de diferença finita, abaixo estão as variáveis que podem ser implementadas na simulação.
+    </h4>
+    <form name = "f2">
+      <p style="color:Azure ;">Temperatura da esquerda: <input type="number" id="tesq" value="500"> </p>
+     <br>
+      <p style="color:Azure ;">Temperatura da direita: <input type="number" id="tdir" value="500">		</p>
+      <br>
+      <p style="color:Azure ;">Temperatura superior: <input type="number" id="tsup" value="500"></p>
+     <br>
+      <p style="color:Azure ;">Temperatura inferior de convecção : <input type="number" id="tconv" value="300">			</p>	
+      <br>
+      <p style="color:Azure ;">coeficiente convectivo (h) inferior de convecção : <input type="number" id="hconv" value="10">				</p>
+      <br>
+      <p style="color:Azure ;">lado em metros: <input type="number" id="lado" value="1">	</p>
+      <br>
+      <p style="color:Azure ;">condutividade termica (k) do material : <input type="number" id="k" value="20">	</p>			
+      <br>
+      <p style="color:Azure ;">tempo de interação (s): <input type="number" id="tem" value="2">		</p>		
+      <br>
+    </form>
+    
+    <input type = "button" value= "Simular" onclick ="myfunction('matrizR')">
+		<p>
+    <a style="color:Red" href="iiunid.html">  <img src = "https://cdn.glitch.com/51baacaa-9b5c-4da7-944e-07e57ef1e56f%2Fvoltar.png?1541711245448" width="75" height="50"></a>   
+    </p>		
+    
+    
+	<h3 style="color:Green  ;" > Resultado </h3>
+    <table border = "5" id = "matrizR" style="color:Azure ;">
+      <script>
+            for ( var i = 0; i <= quanti; i++ ) 
+             {
+               document.write('<tr>');
+                for ( var k = 0; k <= quanti; k++ ) 
+                {
+                  document.write('<td WIDTH = 50 HEIGHT=25> </td>');
+                }
+              document.write('</tr>');
+            }	
+        </script>
+      </table>
+    
+  </body>
+</html>

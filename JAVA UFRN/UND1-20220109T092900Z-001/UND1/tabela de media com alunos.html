@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for/vetor</title>
+		<script>
+		var n;
+		
+		n=+prompt("quantos alunos são?")
+		
+		var nome= new Array(n);
+		var n1= new Array(n);
+		var n2= new Array(n);
+		var n3= new Array(n);
+		var media= new Array(n); 
+		var apr= new Array(n);
+		
+		
+		for(var i=0; i<n;i++)
+		{
+			var j=i+1;
+			nome[i]=prompt("Digite o nome do aluno numero "+j);
+			n1[i]=+prompt("Digite a primeira nota desse aluno");
+			n2[i]=+prompt("Digite a segunda nota desse aluno");
+			n3[i]=+prompt("Digite a terceira nota desse aluno");
+			
+		}
+		
+		for(var i=0; i<n;i++)
+		{
+			media[i]= (n1[i]+n2[i]+n3[i])/3;
+				if(media[i]>=7)
+				{
+					apr[i]='A';
+				}
+				else{
+					apr[i]='R';
+				}
+		}
+		
+		document.writeln("<table border=1>");
+		document.writeln("<tr>");
+			document.writeln("<th width=100>nome</th>");
+			document.writeln("<th width=500> N1</th>");
+			document.writeln("<th width=50>N2</th>");
+			document.writeln("<th width=50>N3</th> ");
+			document.writeln("<th width=50>MEDIA</th>");
+			document.writeln("<th width=50>APROV</th>");
+		document.writeln("</tr>");
+		for(var i=0; i<media.length;i++)
+		{	
+			document.writeln("<tr>");
+				document.writeln("<td width=50>"+nome[i]+"</th>");
+				document.writeln("<td width=50>"+n1[i]+"</th> ");
+				document.writeln("<td width=50>"+n2[i]+"</th>");
+				document.writeln("<td width=50> "+n3[i]+"</th> ");
+				document.writeln("<td width=50>"+media[i].toFixed(1)+"</th>");
+				document.writeln("<td width=50>"+apr[i]+"</th>");
+			document.writeln("</tr>");
+		}
+
+		</script>
+	</head>
+	<meta charset="UTF-8">
+	<body>
+	
+	</body>
+</html>

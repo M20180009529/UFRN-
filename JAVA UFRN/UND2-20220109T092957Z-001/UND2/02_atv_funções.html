@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>aula2_função</title>
+		<meta charset="UTF-8">
+		<script>
+
+            function somar()
+            {
+                var a = document.f1.val1.value
+                var b = document.f1.val2.value
+                document.f1.val3.value = parseFloat(a) + parseFloat(b)
+            }
+
+            function subtrair()
+            {
+                var a = document.f2.val1.value
+                var b = document.f2.val2.value
+                document.f2.val3.value = parseFloat(a) - parseFloat(b)
+            }
+
+            function multiplicacao()
+            {
+                var a = document.f3.val1.value
+                var b = document.f3.val2.value
+                document.f3.val3.value = parseFloat(a) * parseFloat(b)
+            }
+
+            function divisao()
+            {
+                var a = document.f4.val1.value
+                var b = document.f4.val2.value
+                document.f4.val3.value = parseFloat(a) / parseFloat(b)
+            }
+			function resto()
+            {
+                var a = document.f4.val1.value
+                var b = document.f4.val2.value
+                document.f4.val3.value = parseFloat(a) % parseFloat(b)
+            }
+            function potenciacao()
+            {
+                var a = document.f5.val1.value
+                var b = document.f5.val2.value
+                document.f5.val3.value = Math.pow(parseFloat(a),parseFloat(b))
+            }
+            
+		</script>
+	</head>
+	<body>
+         <h1>Multiplicador JavaScript</h1>
+         <form name="f3">
+            <input type=text name="val1" size=5> x
+            <input type=text name="val2" size=5>
+            <input type=button value=" = " onclick="multiplicacao()">
+            <input type=text name="val3" size=5 readonly> 
+        </form>
+
+	   
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<meta charset="utf8" >
+</head>
+<body>
+    <h1> Formulário<h1>
+	<hr>
+		<h2>Dados pessoais<h2>
+			<h3>
+			<form action="/action_page.php">
+				Nome:<br>
+				<input type="text" name="firstname" >
+				<br>
+				Sobrenome:<br>
+				<input type="text" name="lastname" >
+				<br>
+				Data de aniversario:
+				<input type="date" name="datniver">
+				<br>
+				Filho:
+				<input type="number" name="Filho" min="1" max="10">
+				<br>
+				Gênero:<br>
+				<input type="radio" name="genero" value="masculino" checked> masculino<br>
+				<input type="radio" name="genero" value="feminino"> feminino<br>
+				e-mail:<br>
+				<input type="email" name="e-mail" >
+				<br>
+				Telefone:<br>
+				<input type="tel" name="e-mail" >
+				<br>
+			</form>
+			
+			<h3>
+			<hr>
+		<h2>Endereço<h2>
+			<h3>
+			<form action="/action_page.php">
+				Rua:
+				<input type="text" name="rua" >
+				<br>
+				Numero:
+				<input type="text" name="rua" >
+				<br>
+				Bairro:
+				<input type="text" name="bairro" >
+				<br>
+				Estado:<br>
+				<select name="estado">
+					<option value="RN" selected>RN</option>
+					<option value="PB">PB</option>
+					<option value="PE">PE</option>
+					<option value="AL">AL</option>
+					<option value="SE">SE</option>
+					<option value="BA">BA</option>
+					<option value="ES">ES</option>
+					<option value="RJ">RJ</option>
+					<option value="MG">MG</option>
+					<option value="SP">SP</option>
+					<option value="PR">PR</option>
+					<option value="SC">SC</option>
+					<option value="RS">RS</option>
+					<option value="CE">CE</option>
+					<option value="PI">PI</option>
+					<option value="MA">MA</option>
+					<option value="TO">TO</option>
+					<option value="DF">DF</option>
+					<option value="GO">GO</option>
+					<option value="MS">MS</option>
+					<option value="MT">MT</option>
+					<option value="PA">PA</option>
+					<option value="AP">AP</option>
+					<option value="RR">RR</option>
+					<option value="AM">AM</option>
+					<option value="RO">RO</option>
+					<option value="AC">AC</option>
+				</select>
+				<br>
+				Cidade:
+				<input type="text" name="cidade" >
+				<br>
+			</form>
+			<br>
+			<h3>
+			<hr>
+		<h2>Dados Profissionais<h2>
+			<h3>
+			<form>
+				Nome da ultima empresa:
+				<input type="text" name="ult_empresa">
+				<br>
+				Duração:
+				<input type="text" name="dura_ult_empresa">
+				<br>
+				Profissão:
+				<input type="text" name="Profissao">
+				<br>
+				Especialidades:<br>
+				<textarea name="message" rows="10" cols="30">
+					Liste suas especialidades.
+				</textarea>
+				<br>
+				Descrições de ultimas atividades:<br>
+				<textarea name="message" rows="10" cols="30">
+					Fale sobre suas ultimas atividades.
+				</textarea>
+				<br>								
+			</form>
+			<h3>
+			<hr>
+		<h2>Currículo<h2>
+			<h3
+			<form action="/action_page.php">
+				Envie seu curriculo: <br> 
+				<input type="file" name="curriculum"><br>
+				<br>
+				<textarea name="message" rows="10" cols="30">
+					Descrição.
+				</textarea>
+				<br>
+			</form>
+			<h3>
+			<hr>	
+	<br>
+	<button type="button" onclick="alert('FORMULARIO ENVIADO')">enviar</button>
+
+</body>
+</html>

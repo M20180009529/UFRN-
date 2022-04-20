@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operacoes matemáticas</title>
+		<meta charset="UTF-8">
+		<script>
+			
+			// Programa 
+			// Aluno: Lucas Eduardo
+			
+            //Declaração de Variaveis
+
+            function alo()
+            {
+                document.getElementById("RESULTADO").innerHTML="ALO";
+            }
+
+            function show(name)
+            {
+                document.getElementById("RESULTADO").innerHTML=name;
+            }
+
+            function valorPI()
+            {
+               return Math.PI;
+            }
+			function soma(A,B)
+            {
+               return A+B;
+            }
+			function myFunction()
+            {
+               var x;
+			   x=document.getElementById("mySelect").selectedIndex;
+			   switch(x)
+			   {
+				case 1:
+					alo();
+					break;
+			     case 2:	
+					a="fulano";
+					show(a);
+					break;
+				case 3:
+					document.getElementById("RESULTADO").innerHTML=valorPI();
+					break;
+				case 4:
+					a=2;
+					b=3;
+					document.getElementById("RESULTADO").innerHTML=soma(a,b);
+					break;
+			   }
+            }
+			
+		</script>
+	</head>
+	<body>
+        <select id="mySelect">
+			<option> Escolha uma opção </option>;
+			<option> alo </option>;
+			<option> show </option>;
+			<option> valorPI </option>;
+			<option> soma </option>;
+		</select>
+		<button onclick="myFunction()">Executar</button>
+			<hr>
+		<p id="RESULTADO"></p>
+		
+	</body>
+</html>

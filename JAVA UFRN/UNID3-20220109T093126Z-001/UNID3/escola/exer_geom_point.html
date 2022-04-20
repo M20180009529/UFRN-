@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="Biblio_geom_completo.js"></script>
+<script>
+
+function iniciar()
+{
+	var S = new Square();
+	var R = new Rectangle();
+	var C = new Circle();
+	var T = new Triangle();
+
+
+	var s = new Array(3);
+	s[0] = new Point();
+	s[0].set_coord(0,0);
+	s[1] = new Point();
+	s[1].set_coord(150,150);
+	var r = new Array(3);
+	r[0] = new Point();
+	r[0].set_coord(50,5);
+	r[1] = new Point();
+	r[1].set_coord(300,550);
+	var c = new Array(3);
+	c[0] = new Point();
+	c[0].set_coord(0,0);
+	c[1] = new Point();
+	c[1].set_coord(50,60);
+	var t = new Array(3);
+	t[0] = new Point();
+	t[0].set_coord(50,60);
+	t[1] = new Point();
+	t[1].set_coord(50,60);
+	t[2] = new Point();
+	t[2].set_coord(20,90);
+	
+	S.set_diagonal(s);
+	S.set_lado();
+	S.set_coord(400,150);
+	
+	R.set_altura(r);
+	R.set_base(r);
+	R.set_coord(30,100);
+ 
+ 	C.set_raio(c);
+	C.set_coord(125,225);
+	
+	T.set_lados(t);
+	T.set_coord(250,200);
+
+	
+	R.draw("black");
+    S.draw("blue");
+	C.draw("red");
+	T.draw("green",t);
+	
+	areap= R.area()-T.get_area()-S.area()-C.get_area();
+	mensagem ("a area da seção preta é "+ areap.toFixed(2)+" [U.A.]","saida1")
+
+
+}
+window.onload = function() {iniciar();}
+
+function mensagem (mens,id){
+	document.getElementById(id).innerHTML=mens;
+}
+
+
+</script>
+
+</head>
+<style>
+  canvas { border: 1px solid red; }
+</style>
+
+<body>
+<canvas id="myCanvas" width = "600" height = "600"></canvas>
+<hr>
+<p id="saida1"><p>
+<hr>
+</body>
+</html>

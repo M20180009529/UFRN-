@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>atv1</title>
+</head>
+<script src="biblio_point.js"></script>
+<script src="biblio_geom_point.js"></script>
+<script>
+var ponto =new Point();
+var P=new Array(2);
+P[0]=new Point();
+P[1]=new Point ();
+P[2]=new Point ();
+P[1].set_coord(9,7);
+P[2].set_coord(0,4);
+var S = new square();
+var E= new sphere();
+var R= new retangulo();
+var T= new triangle();
+function teste(){
+	mensagem("Estado inicial P[0]: "+ P[0].get_cood(),"saida1");
+	mensagem("Estado inicial P[1]: "+ P[1].get_cood(),"saida2");
+	
+	//quadrado
+	S.set_diag(P);
+	mensagem("diagonal do quadrado: "+ S.get_diag(),"saida3");
+	mensagem("lado do quadrado: "+ S.get_lado(),"saida4");
+	mensagem("Area do quadrado: "+ S.area_quadrado(),"saida5");
+	mensagem("perimetro do quadrado: "+ S.perimetro_quadrado(),"saida6");
+	
+	//esfera
+	E.set_raio(P);
+	mensagem("raio da esfera: "+ E.get_raio(),"saida7");
+	mensagem("Area da esfera: "+ E.area_sphere(),"saida8");
+	mensagem("perimetro da esfera: "+ E.perimetro_sphere(),"saida9");
+	
+	//retangulo
+	R.set_lado(P);
+	mensagem("diagonal do retangulo: "+ R.diag_ret(),"saida10");
+	mensagem("lado do eixo x do retangulo: "+ R.get_ladox(),"saida11");
+	mensagem("lado do eixo y do retangulo: "+ R.get_ladoy(),"saida12");
+	mensagem("Area do retangulo: "+ R.area_retangulo(),"saida13");
+	mensagem("perimetro do retangulo: "+ R.perimetro_retangulo(),"saida14");
+	
+	//triangulo
+	T.distT(P);
+	mensagem("lado a: "+ T.get_a(),"saida15");
+	mensagem("lado b: "+ T.get_b(),"saida16");
+	mensagem("lado c: "+ T.get_c(),"saida17");
+	mensagem("Area do triangulo: "+ T.area_triangulo(),"saida18");
+	mensagem("perimetro do retangulo: "+ T.perimetro_triangulo(),"saida19");
+}
+function mensagem (mens,id){
+	document.getElementById(id).innerHTML=mens;
+}
+</script>
+<body>
+
+<input type ="button" onclick= "teste()" value="click">
+<hr>
+<p id="saida1"><p>;
+<hr>
+<p id="saida2"><p>;
+<hr>
+<h2>quadrado</h2>
+<p id="saida3"><p>;
+<hr>
+<p id="saida4"><p>;
+<hr>
+<p id="saida5"><p>;
+<hr>
+<p id="saida6"><p>;
+<hr>
+<h2>esfera</h2>
+<p id="saida7"><p>;
+<hr>
+<p id="saida8"><p>;
+<hr>
+<p id="saida9"><p>;
+<hr>
+<h2>retangulo</h2>
+<p id="saida10"><p>;
+<hr>
+<p id="saida11"><p>;
+<hr>
+<p id="saida12"><p>;
+<hr>
+<p id="saida13"><p>;
+<hr>
+<p id="saida14"><p>;
+<hr>
+<h2>triangulo</h2>
+<p id="saida15"><p>;
+<hr>
+<p id="saida16"><p>;
+<hr>
+<p id="saida17"><p>;
+<hr>
+<p id="saida18"><p>;
+<hr>
+<p id="saida19"><p>;
+</body>
+</html> 

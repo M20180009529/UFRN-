@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>eq 2 grau</title>	
+		<meta charset="UTF-8">
+	<script>
+		var A;
+		var B;
+		var C;
+		var T;
+		
+		A=parseFloat(prompt("VALOR A"));
+		B=parseFloat(prompt("VALOR B"));
+		C=parseFloat(prompt("VALOR C"));
+		
+		if (C < A || C<B){
+			if (A>B){
+				T=C;
+				C=A;
+				A=T;
+			}
+			else{
+				T=B;
+				B=C;
+				C=T;
+			}
+		}
+		if (B>A){
+			document.write(A +" "+B+" "+C);
+		}
+		else{
+			T=A;
+			A=B;
+			B=T;
+			document.write(A +" "+B+" "+C);
+		}
+		
+	</script>
+	</head>
+
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for/vetor</title>
+		<script>
+		var n;
+		
+		n=+prompt("quantos alunos são?")
+		
+		var nome= new Array(n);
+		var nota= new Array(n);
+		var media= new Array(n); 
+		var apr= new Array(n);
+		//dá quantidades de colunas
+		for(var i=0; i<n;i++)
+		{
+			nota[i]=new Array(3);
+		}
+		//pedir os dados
+		for(var i=0; i<n;i++)
+		{
+			var z=i+1;
+			nome[i]=prompt("Digite o nome do aluno numero "+z);
+				for(var j=0; j<3;j++)
+				{
+					nota[i][j]=+prompt("Digite a nota "+(j+1)+"a. desse aluno");
+				}
+		}
+		
+		//saber se foi aprovado
+		for(var i=0; i<n;i++)
+		{
+			media[i]= (nota[i][0]+nota[i][1]+nota[i][2])/3;
+				if(media[i]>=7)
+				{
+					apr[i]='A';
+				}
+				else{
+					apr[i]='R';
+				}
+		}
+		//tabela de resultados
+		document.writeln("<table border=1>");
+		document.writeln("<tr>");
+			document.writeln("<th width=100>nome</th>");
+			document.writeln("<th width=500> N1</th>");
+			document.writeln("<th width=50>N2</th>");
+			document.writeln("<th width=50>N3</th> ");
+			document.writeln("<th width=50>MEDIA</th>");
+			document.writeln("<th width=50>APROV</th>");
+		document.writeln("</tr>");
+		for(var i=0; i<nota.length;i++)
+		{	
+			document.writeln("<tr>");
+				document.writeln("<td width=50>"+nome[i]+"</th>");
+				for(var j=0; j<3;j++)
+				{
+					document.writeln("<td >"+nota[i][j]+"</th>");
+				}
+				document.writeln("<td width=50>"+media[i].toFixed(1)+"</th>");
+				document.writeln("<td width=50>"+apr[i]+"</th>");
+			document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		</script>
+	</head>
+	<meta charset="UTF-8">
+	<body>
+	
+	</body>
+</html>

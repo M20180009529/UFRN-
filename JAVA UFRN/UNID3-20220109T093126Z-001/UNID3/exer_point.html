@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>atv1</title>
+</head>
+<script src="biblio_point.js"></script>
+<script src="biblio_geom.js"></script>
+<script>
+var ponto =new Point();
+var q=new Point();
+var dis;
+function teste(){
+	ponto.set_coord(9,7);
+	mensagem("Estado inicial : "+ ponto.get_cood(),"saida1");
+	q=ponto.novoPonto(9,7);
+	mensagem("Estado final"+ q.get_cood(),"saida2");
+	d=ponto.dist2p(q);
+	mensagem("distancia "+ d,"saida3");
+	
+}
+function mensagem (mens,id){
+	document.getElementById(id).innerHTML=mens;
+}
+</script>
+<body>
+
+<input type ="button" onclick= "teste()" value="click">
+<hr>
+<p id="saida1"><p>;
+<hr>
+<p id="saida2"><p>;
+<hr>
+<p id="saida3"><p>;
+</body>
+</html> 

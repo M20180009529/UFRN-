@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>atv5</title>
+		<script type="application/javascript" src="biblio_prova.js"></script>
+		<meta charset="UTF-8">
+		<script>
+			var tam= 5;
+			var med1=new Array(tam);
+			var var1=new Array(tam);
+			var DPP1=new Array(tam);
+			var mat =new Array(tam);
+			for(var j=0; j<mat.length;j++){
+			mat[j]=new Array(tam);
+			}
+			var soma;
+			
+			function Q1(n,med,vari,DP1){
+
+					gerarmatriz(n,30,10);				
+					media_linha(n,med);
+					variancia_linha(n,med,vari);
+					DP(vari,DP1);
+					document.writeln("<a> A matriz gerada: </a>");
+					imprimirmatriz(n);
+					document.writeln("<p> A média de cada linha: </p>");
+					imprimirvetor(med);
+					document.writeln("<p> A variancia de cada linha: </p>");
+					imprimirvetor(vari);
+					document.writeln("<p> O desvio padrão de cada linha: </p>");
+					imprimirvetor(DP1);
+					document.writeln("<h2> O selecionado é o da linha "+ maiorDP(DP1)+" </h2>");
+
+					
+			}
+			function Q2(n,som){
+
+					n=[[4,1],[7,3],[6,6],[2,7],[1,4],[4,1]];
+					document.writeln("<p> A matriz gerada: </p>");
+					imprimirmatriz(n);
+					document.writeln("<p> o resultado final é: "+questão2(n)+"</p>");
+					
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="Q1(mat,med1,var1,DPP1)" > questão 1 </button> 
+		<button onclick="Q2(mat,soma)" > questão 2 </button> 
+</html>

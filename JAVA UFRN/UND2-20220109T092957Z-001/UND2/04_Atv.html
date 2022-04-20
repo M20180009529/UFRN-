@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operacoes matemáticas</title>
+		<meta charset="UTF-8">
+		<script>
+			
+			// Programa 
+			// Aluno: Lucas Eduardo
+			
+			function lerDados ()
+            {
+                a=+document.getElementById("entrada1").value;
+				b=+document.getElementById("entrada2").value;
+            }
+            function soma()
+            {
+                return a+b;
+            }
+			function escreve()
+            {
+                document.getElementById("saida1").value=soma();
+            }
+            
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="entrada1" size=5> <br>
+		<input type="text" id="entrada2" size=5> <br>
+		<hr>
+		<input type="text" id="saida1" size=5 disabled><br>
+		<input type="button" value="Pega" size=5> 
+		<input type="button" value="Escreve" size=5> 
+
+	</body>
+</html>

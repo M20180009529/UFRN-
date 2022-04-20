@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operacoes matemáticas</title>
+		<meta charset="UTF-8">
+		<script>
+			
+			// Programa 
+			// Aluno: Rafael Bezerra da Escóssia Araújo
+			
+            //Declaração de Variaveis
+
+            function somar()
+            {
+                var a = document.f1.val1.value
+                var b = document.f1.val2.value
+                document.f1.val3.value = parseFloat(a) + parseFloat(b)
+            }
+
+            function subtrair()
+            {
+                var a = document.f2.val1.value
+                var b = document.f2.val2.value
+                document.f2.val3.value = parseFloat(a) - parseFloat(b)
+            }
+
+            function multiplicacao()
+            {
+                var a = document.f3.val1.value
+                var b = document.f3.val2.value
+                document.f3.val3.value = parseFloat(a) * parseFloat(b)
+            }
+
+            function divisao()
+            {
+                var a = document.f4.val1.value
+                var b = document.f4.val2.value
+                document.f4.val3.value = parseFloat(a) / parseFloat(b)
+            }
+
+            function potenciacao()
+            {
+                var a = document.f5.val1.value
+                var b = document.f5.val2.value
+                document.f5.val3.value = Math.pow(parseFloat(a),parseFloat(b))
+            }
+		</script>
+	</head>
+	<body>
+        <h1>Somador JavaScript</h1>
+
+        <form name="f1">
+             <input type=text name="val1" size=5> +
+             <input type=text name="val2" size=5>
+             <input type=button value=" = " onclick="somar()">
+             <input type=text name="val3" size=5>
+        </form>
+
+        <h1>Subtrador JavaScript</h1>
+
+        <form name="f2">
+            <input type=text name="val1" size=5> -
+            <input type=text name="val2" size=5>
+            <input type=button value=" = " onclick="subtrair()">
+            <input type=text name="val3" size=5>
+        </form>
+
+        <h1>Multiplicador JavaScript</h1>
+
+        <form name="f3">
+            <input type=text name="val1" size=5> x
+            <input type=text name="val2" size=5>
+            <input type=button value=" = " onclick="multiplicacao()">
+            <input type=text name="val3" size=5>
+        </form>
+
+        <h1>Divisor JavaScript</h1>
+
+        <form name="f4">
+            <input type=text name="val1" size=5> /
+            <input type=text name="val2" size=5>
+            <input type=button value=" = " onclick="divisao()">
+            <input type=text name="val3" size=5>
+        </form>
+
+        <h1>Potenciador JavaScript</h1>
+
+        <form name="f5">
+            <input type=text name="val1" size=5> ^
+            <input type=text name="val2" size=5>
+            <input type=button value=" = " onclick="potenciacao()">
+            <input type=text name="val3" size=5>
+        </form>
+	</body>
+</html>

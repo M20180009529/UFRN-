@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Votação times</title>
+		<script>
+			var opção;
+			var ame;
+			var abc;
+			var ale;
+			var glob;
+			var nulo;
+		
+			document.writeln("<h1> escolha seu time </h1>"); //co0locar na tela
+			document.writeln("<h2> 1-America </h2>");
+			document.writeln("<h2> 2-ABC </h2>");
+			document.writeln("<h2> 3-Alegrim </h2>");
+			document.writeln("<h2> 4-Globo </h2>");
+			document.writeln("<h2> 5-Sair </h2>");
+			
+			ame = 0;
+			abc= 0;
+			ale= 0;
+			glob= 0;
+			nulo= 0;
+			
+			do{
+				opção=parseInt(prompt("Digite sua opção")); //pedir qual opção abrir
+				switch (opção)											//opção de abrir 
+				{
+					case 1:
+						ame++;
+						break;
+					case 2:
+						abc++;
+						break;
+					case 3:
+						ale++;
+					break;
+					case 4:
+						glob++;
+					break;
+					case 5:
+						document.writeln("<h3> O vencedor é .... </h3>");
+					break;
+					default:
+						nulo++;
+				}
+			}while (opção != 5)
+			
+			if ((ame>abc) && (ame>ale) && (ame>glob)){
+				document.writeln("<h1> America ganhou </h1>");
+			}
+			else{
+				if ( (abc>ale) && (abc>glob)){
+					document.writeln("<h1> Abc ganhou </h1>");
+				}
+				else{
+					if (ale>glob){
+					document.writeln("<h1> Alegrim ganhou </h1>");
+					}
+					else{
+							if ((ale==ame) || (ale==abc) || (ale==glob)){
+						document.writeln("<h1> Empate </h1>");
+						}
+						else{
+							document.writeln("<h1> Globo ganhou </h1>");
+						}
+					}
+				}
+			}
+		document.writeln("<h3>" +nulo +" Votos nulos </h3>");
+		
+		document.writeln("<table border=1>");
+			document.writeln("<tr>");
+					document.writeln("<th>Time:</th>");
+					document.writeln("<th>America</th> ");
+					document.writeln("<th>ABC</th>");
+					document.writeln("<th>Alegrim</th> ");
+					document.writeln("<th>Globo</th>");
+				document.writeln("</tr>");
+				document.writeln("<tr>");
+					document.writeln("<th>Votos</th> ");
+					document.writeln("<th>"+ame+"</th>");
+					document.writeln("<td>"+abc+"</td>");
+					document.writeln("<td>"+ale+"</td>"); 
+					document.writeln("<td>"+glob+"</td>");
+				document.writeln("</tr>");
+			document.writeln("</table> </h3>");
+		</script>
+	</head>
+	<meta charset="UTF-8">
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operacoes matemáticas</title>
+		<meta charset="UTF-8">
+		<script>
+			
+			// Programa 
+			// Aluno: Lucas Eduardo
+			
+            //Declaração de Variaveis
+
+
+			function ope()
+            {
+                var x;
+			   x=document.getElementById("mySelect").selectedIndex;
+			    var a = document.getElementById("entrada1").value;
+                var b = document.getElementById("entrada2").value;
+			   switch(x)
+			   {
+				case 1:
+					 document.getElementById("saida").value = parseFloat(a) + parseFloat(b)
+					break;
+			     case 2:	
+					document.getElementById("saida").value = parseFloat(a) - parseFloat(b)
+					break;
+				case 3:
+					document.getElementById("saida").value = parseFloat(a) * parseFloat(b)
+					break;
+				case 4:
+					document.getElementById("saida").value = parseFloat(a) / parseFloat(b)
+					break;
+			   
+			   case 5:
+					document.getElementById("saida").value = Math.pow(parseFloat(a),parseFloat(b))
+					break;
+			   
+			   case 6:
+					document.getElementById("saida").value = parseFloat(a) % parseFloat(b)
+					break;
+			   }
+            }
+		</script>
+	</head>
+	<body>
+         <input type="text" id="entrada1" name="val1" size=5> 
+         <select id="mySelect">
+			<option> Escolha uma opção </option>;
+			<option> Somar </option>;
+			<option> subtrair </option>;
+			<option> multiplicar </option>;
+			<option> dividir </option>;
+			<option> potenciação </option>;
+			<option> resto </option>;
+		</select>
+		<input type="text" id="entrada2" name="val2" size=5> 
+
+		<button onclick="ope()">=</button>
+		<input type="text" id="saida" name="val2" size=5> 
+	</body>
+</html>

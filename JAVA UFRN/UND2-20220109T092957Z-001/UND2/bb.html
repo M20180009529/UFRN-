@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>atv8</title>
+		<script type="application/javascript" src="biblio_matriz.js"></script>
+		<meta charset="UTF-8">
+		<script>
+			var tam= 4;
+			
+			var mata = new Array(tam);
+			var matb = new Array(tam);
+			var matc = new Array(tam);
+			
+			for(var i=0; i<tam;i++){
+				mata[i]=new Array(tam);
+			}
+			for(var i=0; i<tam;i++){
+				matb[i]=new Array(3);
+			}
+			for(var i=0; i<tam;i++){
+				matc[i]=new Array(tam);
+			}
+			
+			function myfunction(n1,n2,n3){
+
+					gerarmatriz(n1);
+					gerarmatriz(n2);
+					gerarmatriz(n3);
+					imprimirmatriz(n1);
+					imprimirmatriz(n2);
+					multiplicarmatriz(n1,n2,n3)
+					imprimirmatriz(n3);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="myfunction(mata,matb,matc)" > click me </button> 
+		
+</html>
